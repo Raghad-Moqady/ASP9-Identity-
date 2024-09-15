@@ -1,5 +1,6 @@
 
 using Identity1.Data;
+using Identity1.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,7 @@ namespace Identity1
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             //Identity services
-            builder.Services.AddIdentity<IdentityUser,IdentityRole>()
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
 

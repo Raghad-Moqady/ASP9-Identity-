@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Identity1.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Identity1.Data
@@ -8,7 +9,7 @@ namespace Identity1.Data
    //لذلك نقوم بعكس هذه الجداول الضمنية الغير ظاهرة على الداتا بيس مباشرة دون الحاجة حتى لانشاء جداول بشكل يدوي بالداتابيس*مبدئيا
    //بعدها سيظهر لدينا 3جداول بالداتا بيس 
    //تساعدني بموضوع الصلاحيات وتسجيل الدخول وهذه الامور 
-    public class ApplicationDbContext:IdentityDbContext
+    public class ApplicationDbContext:IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
        : base(options){ }

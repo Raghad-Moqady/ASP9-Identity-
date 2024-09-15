@@ -1,0 +1,60 @@
+﻿@model IEnumerable<UserViewModel>
+ 
+
+<h1>All Users</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roles)
+            </th>
+            <th>
+                operations
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+               @item.UserName.Split("@")[0]
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.City)
+             </td>
+             <td>
+                @string.Join(",",item.Roles)
+             </td>
+
+             <td>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Super Admin") || User.IsInRole("HR"))
+                    {
+                        <a asp-controller="Accounts" asp-action="EditUserRole" asp-route-id="@item.Id">Change Role</a>
+                 }
+             </td>
+        </tr>
+}
+    </tbody>
+</table>

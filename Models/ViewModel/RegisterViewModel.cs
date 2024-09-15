@@ -24,6 +24,7 @@ namespace Identity1.Models.ViewModel
 
 
         public string Phone { get; set; }
+        public string City { get; set; }
  
     }
 }

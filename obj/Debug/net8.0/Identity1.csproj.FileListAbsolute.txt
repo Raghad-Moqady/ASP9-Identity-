@@ -268,3 +268,4 @@ C:\Users\HP\Desktop\fullStack\BackEnd\MVC\MVC_Round9\Identity1\Identity1\bin\Deb
 C:\Users\HP\Desktop\fullStack\BackEnd\MVC\MVC_Round9\Identity1\Identity1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\HP\Desktop\fullStack\BackEnd\MVC\MVC_Round9\Identity1\Identity1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\HP\Desktop\fullStack\BackEnd\MVC\MVC_Round9\Identity1\Identity1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\fullStack\BackEnd\MVC\MVC_Round9\Identity1\Identity1\obj\Debug\net8.0\Identity1.sourcelink.json
